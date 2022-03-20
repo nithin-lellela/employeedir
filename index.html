@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="icon.png" type="image/x-type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Employee Directory</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="root">
+    <div class="container-fluid p-4">
+      <nav class="navbar navbar-expand navbar-light">
+        <div class="container-fluid">
+            <ul class="nav navibar1">
+              <li class="nav-item">
+                <a class="navbar-brand" href="#"><img class="logo" src="lg1.png"  height="60" alt=""></a>
+              </li>
+              <li class="nav-item navtitle">
+                  <a href="#" class="nav-link navleft">
+                  <span>Employee Directory</span><br>
+                  The Ultimate People Directory Experience</a>
+              </li>
+            </ul>
+            <ul class="nav justify-content-end navibar2">
+              <li class="nav-item">
+                <a class="nav-link navright" href="#"><span>Welcome, </span>Andrew Philips</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand navimg" href="#"><img class="profile" src="profile.png"  height="70" alt=""></a>
+              </li>            
+            </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container-fluid p-3">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="newDiv1">
+            <ul id="deptmt">
+              <h3>Departments</h3>
+            </ul>
+            <ul id="ofcs">
+              <h3>Offices</h3>
+            </ul>
+            <ul id="job-titles">
+              <h3>Job Titles</h3>
+              <!--<a href="#">view more</a>-->
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-10" >
+          <div class="row">
+            <div class="col-md-12">
+              <div class="newDiv2">
+                <div class="row">
+                  <div class="btns" id="bt">
+                  <a href="#" onclick="searchByAlphabet('')"><i class="fas fa-user"></i></a>
+                  <a href="#" onclick="searchByAlphabet('A')">A</a>
+                  <a href="#" onclick="searchByAlphabet('B')">B</a>
+                  <a href="#" onclick="searchByAlphabet('C')">C</a>
+                  <a href="#" onclick="searchByAlphabet('D')">D</a>
+                  <a href="#" onclick="searchByAlphabet('E')">E</a>
+                  <a href="#" onclick="searchByAlphabet('F')">F</a>
+                  <a href="#" onclick="searchByAlphabet('G')">G</a>
+                  <a href="#" onclick="searchByAlphabet('H')">H</a>
+                  <a href="#" onclick="searchByAlphabet('I')">I</a>
+                  <a href="#" onclick="searchByAlphabet('J')">J</a>
+                  <a href="#" onclick="searchByAlphabet('K')">K</a>
+                  <a href="#" onclick="searchByAlphabet('L')">L</a>
+                  <a href="#" onclick="searchByAlphabet('M')">M</a>
+                  <a href="#" onclick="searchByAlphabet('N')">N</a>
+                  <a href="#" onclick="searchByAlphabet('O')">O</a>
+                  <a href="#" onclick="searchByAlphabet('P')">P</a>
+                  <a href="#" onclick="searchByAlphabet('Q')">Q</a>
+                  <a href="#" onclick="searchByAlphabet('R')">R</a>
+                  <a href="#" onclick="searchByAlphabet('S')">S</a>
+                  <a href="#" onclick="searchByAlphabet('T')">T</a>
+                  <a href="#" onclick="searchByAlphabet('U')">U</a>
+                  <a href="#" onclick="searchByAlphabet('V')">V</a>
+                  <a href="#" onclick="searchByAlphabet('W')">W</a>
+                  <a href="#" onclick="searchByAlphabet('X')">X</a>
+                  <a href="#" onclick="searchByAlphabet('Y')">Y</a>
+                  <a href="#" onclick="searchByAlphabet('Z')">Z</a>
+                  </div>
+                </div>
+                <div class="row my-1">
+                  <div class="col-md-5 b1">
+                    <div class="row my-3">
+                      <div class="col-md-2 srch">
+                        <h4>Search</h4>
+                      </div>
+                      <div class="col-md-7 srch-box">
+                        <input type="text" id="myInput" onkeyup="searchBar()" placeholder=" &#xf002; Enter any keyword" style="font-family:Arial, FontAwesome">
+                      </div>
+                      <div class="col-md-3 my-2 clr">
+                        <a href="#" class="clr-btn" id="clearBtn" onclick="clearSearch()">Clear</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4" >
+                    <div class="row my-3">
+                      <div class="col-md-5">
+                        <h4 class="mx-2">Filter by</h4>
+                      </div>
+                      <div class="col-md-7 px-2 filter-by">
+                        <select class="select" id="slctdd" onchange="preferredSearch()">
+                          <option value="prefered Name">Prefered Name</option>
+                          <option value="Department">Department</option>
+                          <option value="Job Title">Job Title</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-1">
+                    <div class="add-emp my-4" >
+                      <a href="#" id="open">Add Employee</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="note">
+                  <h6>Note:<span> Please use the advanced filter options to refine your results</span></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mr-4 emp-info" id="info">
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="popup">
+        <div class="wrapper">
+          <section class="form signup">
+            <a href="#" class="close"><i class="fa-solid fa-circle-xmark"></i></a>
+              <header>Add Employee</header>
+              <form id="frm1" method="post" action="#">
+                  <div class="name-details">
+                      <div class="field input">
+                          <label>First Name</label>
+                          <input type="text" name="fname" placeholder="enter firstname" id="fn" required>
+                      </div>
+                      <div class="field input">
+                          <label>Last Name</label>
+                          <input type="text" name="lname" placeholder="enter Lastname" id="ln" required>
+                      </div>
+                  </div>
+                  <div class="field input">
+                    <label>Preferred Name</label>
+                    <input type="text" name="Pname" placeholder="preferred Name" id="pn" required>
+                  </div>
+                  <div class="name-details">
+                    <div class="field input">
+                      <label>Email ID</label>
+                      <input type="text" name="email" placeholder="enter email" id="em" required>
+                    </div>
+                    <div class="field input">
+                      <label>Job Title</label>
+                      <input type="text" name="job" placeholder="enter Job Title" id="jt" required>
+                    </div>
+                  </div>
+                  <div class="name-details">
+                    <div class="field input">
+                      <label>Office</label>
+                      <input type="text" name="office" placeholder="enter office location" id="of" required>
+                    </div>
+                    <div class="field input">
+                      <label>Department</label>
+                      <input type="text" name="department" placeholder="enter department" id="dp" required>
+                    </div>
+                  </div>
+                  <div class="name-details">
+                    <div class="field input">
+                      <label>Phone number</label>
+                      <input type="number" name="pnumb" placeholder="enter phone number" id="ph" required>
+                    </div>
+                    <div class="field input">
+                      <label>Skype ID</label>
+                      <input type="text" name="skype" placeholder="enter skype ID" id="si" required>
+                    </div>
+                  </div>
+                  <div class="field image">
+                      <label>Select image</label>
+                      <input type="file" name="image" id="im" required>
+                  </div>
+                  <div class="field button">
+                      <input type="submit" value="submit" id="btn1">
+                  </div>                    
+              </form>
+          </section>
+        </div>
+    </div>
+    <div class="popup_wrap1">
+      <div class="overlay">
+
+      </div>
+      <div class="popup_box">
+          <div class="close_btn" onclick="closeEmployeeDetails()">
+          </div>
+          <div class="left_img">
+              <img src="" id="myIMAGE">
+          </div>
+          <div class="right_content">
+              <form id="frm1" method="post">
+                  <div class="name-details">
+                      <div class="field input">
+                          <label>First Name</label>
+                          <input type="text" name="fname" placeholder="enter firstname" id="fn1" required>
+                      </div>
+                      <div class="field input">
+                          <label>Last Name</label>
+                          <input type="text" name="lname" placeholder="enter Lastname" id="ln1" required>
+                      </div>
+                  </div>
+                  <div class="name-details">
+                    <div class="field input">
+                      <label>Email ID</label>
+                      <input type="text" name="email" placeholder="enter email" id="em1" required>
+                    </div>
+                    <div class="field input">
+                      <label>Job Title</label>
+                      <input type="text" name="job" placeholder="enter Job Title" id="jt1" required>
+                    </div>
+                  </div>
+                  <div class="name-details">
+                    <div class="field input">
+                      <label>Office</label>
+                      <input type="text" name="office" placeholder="enter office location" id="of1" required>
+                    </div>
+                    <div class="field input">
+                      <label>Department</label>
+                      <input type="text" name="department" placeholder="enter department" id="dp1" required>
+                    </div>
+                  </div>
+                  <div class="name-details">
+                    <div class="field input">
+                      <label>Phone number</label>
+                      <input type="number" name="pnumb" placeholder="enter phone number" id="ph1" required>
+                    </div>
+                    <div class="field input">
+                      <label>Skype ID</label>
+                      <input type="text" name="skype" placeholder="enter skype ID" id="si1" required>
+                    </div>
+                  </div>
+                  <div class="field image">
+                      <label>Select image</label>
+                      <input type="file" name="image" id="im1" required>
+                  </div>
+                  <div class="field button">
+                      <input type="button" value="save" id="btn4">
+                  </div>                    
+              </form>
+          </div>
+      </div>
+    </div>
+    </div>
+      
+
+    
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
